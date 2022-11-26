@@ -5,6 +5,12 @@ pragma solidity ^0.8.9;
 import "hardhat/console.sol";
 
 contract Message{
-    string  message;
-    event 
+    string public message;
+    
+    function setmessage(string memory _message) public{
+        message=_message;
+    }
+
+
+    
 }
