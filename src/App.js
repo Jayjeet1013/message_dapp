@@ -9,7 +9,7 @@ function App() {
          
       </header>
       <body className='body'>
-        <button type='button' className='btn'>Connet</button>
+        <button type='button' className='btn'>Connect</button>
 
       </body>
       <footer className=' footer'>
