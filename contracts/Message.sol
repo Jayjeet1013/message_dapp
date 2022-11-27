@@ -11,6 +11,9 @@ contract Message{
         message=_message;
     }
 
+    function getmessage() public view returns(string memory){
+        return message;
+    }
 
     
 }
