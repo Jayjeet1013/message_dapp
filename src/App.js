@@ -1,7 +1,9 @@
-
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+const [message,setMessage]=useState();
+
   return (
     <div className="App">
       <header className="App-header">
