@@ -2,6 +2,8 @@ import { useState,useEffect } from 'react';
 import {ethers } from 'ethers'
 import abi from './artifacts/contracts/Message.sol/Message.json'
 import './App.css';
+import SetMessage from './components/SetMessage';
+import Memos from './components/Memos'
 
 function App() {
 
@@ -57,13 +59,12 @@ useEffect(() => {
          <h1>Decentralized Messsage ARea</h1>
          
       </header>
-      <body className='body'>
-      <form>
-       <input type="text"/>
-       <button type='button' className='btn'>Send</button>
+    
+     
        <p>connnected wallet {account}</p>
-       </form>
-      </body>
+       <SetMessage state={state}/>
+       <Memos state={state}/>
+    
       <footer className=' footer'>
         Made by Jay
       </footer>
