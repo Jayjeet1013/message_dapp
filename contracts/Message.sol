@@ -1,19 +1,27 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.9;
 
-// Import this file to use console.log
-import "hardhat/console.sol";
 
-contract Message{
-    string public message;
-    
-    function setmessage(string memory _message) public{
-        message=_message;
-    }
+//SPDX-License-Identifier: MIT
 
-    function getmessage() public view returns(string memory){
-        return message;
-    }
+pragma solidity>0.5.0 <0.9.0;
 
-    
+contract talk{
+
+       struct Memo{
+        string message;
+        uint256 timestamp;
+        address from;
+       }
+
+       Memo[]  memos;
+      
+
+       function setMessage(string memory message) public {
+        memos.push(Memo(message,block.timestamp,msg.sender));
+       }
+
+       function getMemos() public view returns(Memo[] memory){
+        return memos;
+       }
+
 }
+
