@@ -1,5 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 
+require('dotenv').config();
+
 /** @type import('hardhat/config').HardhatUserConfig */
 
 const GOERLI_URL =process.env.GOERLI_URL;

@@ -4,12 +4,12 @@ const hre = require("hardhat");
 async function main() {
 
 
-  const Message = await hre.ethers.getContractFactory("Message");
-  const message = await Message.deploy();
+  const talk = await hre.ethers.getContractFactory("talk");
+  const contract = await talk.deploy();
 
-  await message.deployed();
+  await contract.deployed();
 
-  console.log("Your message is :", message.address);
+  console.log("Your message is :", contract.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
